@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="./dist/css/main.min.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+
+<body>
+    <header>
+        <a id="toggleMenu">Menu<a></a>
+            <span class="logo">My WebSite</span>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+    </header>
+
+    <main>
+        <h1>Hello, I am Ryan Drobel</h1>
+
+        <h2>Full Stack Web and Hybrid Mobile Application Developer</h2>
+        <img class="avatar" src="https://secure.gravatar.com/avatar/f8eaa7856cd542ad49204158d0919ad9" alt="Ryan Drobel">
+        <p>I enjoy learning and applying new technologies to solve complex problems.
+            Experienced in building full stack scalable web applications to create phenomenal user experiences. <br><br>
+
+            Excellent in
+            building and maintaining client relationships and providing quality customer service. Passionate about
+            teamwork
+            and assisting companies and individuals in meeting their goals.
+    </main>
+    <script>
+
+        var toggleMenu = document.getElementById('toggleMenu');
+        var nav = document.querySelector('nav');
+        toggleMenu.addEventListener(
+            'click',
+            function () {
+                if (nav.style.display == 'block') {
+                    nav.style.display = 'none';
+                } else {
+                    nav.style.display = 'block';
+                }
+            }
+        );
+    </script>
+</body>
+
+
+
+</html>
