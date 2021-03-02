@@ -4,8 +4,8 @@ require '../core/processContactForm.php';
 
 //Build the page metadata
 $meta = [];
-$meta['description'] = "Contact Ryan Drobel for Hybring Mobile Applications and Web Development";
-$meta['keywords'] = "Contact Ryan Drobel, web development, web, mobile development";
+$meta['description'] = "Contact MicroTrain2101 For Web Development";
+$meta['keywords'] = "contact, MicroTrain2101, Web development, web development";
 
 $content = <<<EOT
 <form action="contact.php" method="POST">

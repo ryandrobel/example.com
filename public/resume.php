@@ -1,32 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
+<?php
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume</title>
+//Build the page metadata
+$meta = [];
+$meta['description'] = "Resume MicroTrain2101 For Web Development";
+$meta['keywords'] = "resume, MicroTrain2101, Web development, web development";
 
-    <link rel="stylesheet" type="text/css" href="./dist/css/main.min.css">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-</head>
 
-<body>
-
-    <header>
-        <a id="toggleMenu">Menu<a></a>
-            <span class="logo">My WebSite</span>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </nav>
-    </header>
+$content = <<<EOT
     <main>
         <section class="h">
 
@@ -147,21 +127,6 @@
         </section>
 
     </main>
-    <script>
+    EOT;
 
-        var toggleMenu = document.getElementById('toggleMenu');
-        var nav = document.querySelector('nav');
-        toggleMenu.addEventListener(
-            'click',
-            function () {
-                if (nav.style.display == 'block') {
-                    nav.style.display = 'none';
-                } else {
-                    nav.style.display = 'block';
-                }
-            }
-        );
-    </script>
-</body>
-
-</html>
+    include '../core/layout.php';

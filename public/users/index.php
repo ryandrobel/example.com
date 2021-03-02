@@ -1,25 +1,25 @@
 <?php
 include '../../core/db_connect.php';
 
+//Build the page metadata
+$meta = [];
+$meta['description'] = "MicroTrain2101 Users";
+$meta['keywords'] = "users, MicroTrain2101, user";
+
 $content=null;
 $stmt = $pdo->query("SELECT * FROM users");
 
 while ($row = $stmt->fetch())
 {
 
-    $content .= "<a href=\"layout.php?email={$row['email']}\">{$row['first_name']}</a>";
-
+    $content .= "<a href=\"view.php?id={$row['id']}\">{$row['first_name']}
+    {$row['last_name']}</a>";
 }
 
-$content=<<<EOT
-
-<div>
-<a class="btn btn-link" href="add.php?id={$row['id']}">Add A Post</a>
-<a class="btn btn-link" href="../users/add.php?id={$row['id']}">Add A User</a>
+$content .= <<<EOT
+<div class="form-group">
+    <a href="add.php" class="btn btn-primary">New User</a>
 </div>
-
 EOT;
-echo $content;
-
 
 include '../../core/layout.php';
